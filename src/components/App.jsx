@@ -53,11 +53,11 @@ function App() {
             <h1>Experience</h1>
             <hr/>
             <div className="portfolio">
-                <div>
+                <div className="jobs-container">
                     <div className="btn-container">
                         {
                             portfolio.map((item, index) => {
-                                return <button key={item.id} onClick={() => {
+                                return <button key={item.id} className={`btn ${index === value && 'active-btn'}`} onClick={() => {
                                     setValue(index)
                                 }}>
                                     {item.company}
@@ -65,9 +65,6 @@ function App() {
                             })
                         }
                     </div>
-                    {/* <h3>{title}</h3>
-                    <h4>{company}</h4>
-                    <p>{dates}</p> */}
                     <h3>{items[value]}</h3>
 
                 </div>

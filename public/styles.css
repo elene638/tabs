@@ -29,6 +29,8 @@ hr {
     margin: auto;
     width: 70vw;
     margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 .job-info {
@@ -75,13 +77,6 @@ hr {
     color: #78346a;
 }
 
-/* @media screen and (min-width: 992px) {
-
-    .btn-container{
-        flex-direction: column;
-        justify-content: flex-start;
-    }
- } */
 
 .btn-container {
     display: flex;
@@ -91,28 +86,41 @@ hr {
     flex-wrap: wrap;
 }
 
-button {
+.btn {
     text-transform: uppercase;
-    background: #774360;
-    color: #ccb1c7;
+    background: transparent;
+    color: #774360;
     padding: 0.375rem 0.75rem;
     letter-spacing: 0.1rem;
     font-weight: 700;
-    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
     font-size: 0.875rem;
-    border: 2px solid transparent;
+    border: transparent;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
     display: block;
     width: 12rem;
     text-align: center;
     margin: 0 auto;
     margin-top: 3rem;
+    border-radius: 0px;
 }
 
-button:hover {
-    color: #774360;
-    background-color: transparent;
+
+.active-btn {
+    color: #450f2d;
+    box-shadow:inset 3px 0 0 0 #450f2d;
 }
+
+.jobs-container {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 4rem;
+    
+  }
+
+  .btn-container {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
